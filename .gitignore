@@ -1,0 +1,6 @@
+# Ignore everything
+*
+# But not these files...
+!.gitignore
+!EXERCISE_META_16_A_show.txt
+!EXERCISE_META_16_B_show.txt

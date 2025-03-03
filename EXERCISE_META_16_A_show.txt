@@ -1,0 +1,121 @@
+#####################################################################################################################################################
+# EXERCISE_META_16_A: EXERCISE SETUP PREPARATION
+#####################################################################################################################################################
+
+
+# MAIN MOTHUR LINKS
+#####################################################################
+
+https://mothur.org/
+https://mothur.org/wiki/mothur_manual/
+https://mothur.org/wiki/tags/#commands
+https://mothur.org/wiki/silva_reference_files/
+https://mothur.org/wiki/taxonomy_outline/
+https://mothur.org/wiki/miseq_sop/
+https://github.com/mothur/mothur/releases
+
+
+# MAIN MOTHUR COMMANDS
+#####################################################################
+
+To enter interactive mode type at the prompt:
+$ mothur
+mothur > set.dir(input=input_folder,output=output_folder)
+mothur > set.current(processors=4)
+mothur > get.current()
+mothur > help()
+mothur > help(set.current)
+mothur > quit()
+
+
+# INSTALL MOTHUR
+#####################################################################
+
+Download mothur v1.48.0 (or v1.48.2, but check requirements) from:
+
+	https://github.com/mothur/mothur/releases
+
+Place mothur in a folder called, for example:
+
+	/home/mjgommo/APPLICATIONS/mothur
+
+and configure your $PATH variable to include $path_to_mothur/mothur, or create symbolic links in your bin folder to mothur executable files.
+
+To open mothur, type "mothur" at the console prompt:
+
+$ mothur
+mothur > quit()
+
+From https://mothur.org/wiki/miseq_sop:
+If you are working on a Mac OS X computer, the first time you run mothur you will get a scary looking message that says, “mothur” cannot be opened because it is from an unidentified developer. macOS cannot verify that this app is free from malware.” Click the OK button. To permanently get rid of this message right click on the mothur icon, highlight “Open with…”, and while holding the command key select “Terminal (open)”. Now you’ll get a message that says, “macOS cannot verify the developer of “mothur”. Are you sure you want to open it? macOS cannot verify the developer of “mothur”. Are you sure you want to open it?” Click “Open”. Repeat this with the vsearch app.
+
+
+# DOWNLOAD INPUT SEQUENCE FILES
+#####################################################################
+
+Download files from:
+
+	https://www.dropbox.com/scl/fi/s6mrxl0gtyzm9602tewbg/META_16_SEQS.zip?rlkey=gt3rn0n3zefhqzx5g85dlvqji&st=ozmgvx4e&dl=0
+
+It is possible to use:
+
+	wget "https://www.dropbox.com/scl/fi/s6mrxl0gtyzm9602tewbg/META_16_SEQS.zip?rlkey=gt3rn0n3zefhqzx5g85dlvqji&st=ozmgvx4e&dl=0"
+
+Place the compressed archive in a folder that will house the whole exercise:
+
+	/home/mjgommo/DATA/NEBRIJA/META_16
+
+Questions:
+
+	* Is it possible to identify the primers that were used to amplify the fragments?
+	  You can use info from: 
+		https://www.frontiersin.org/articles/10.3389/fmars.2023.1199116/full
+	* Length of amplified fragments?
+	* Length of reads?
+	* How many sequence fragments per sample?
+
+
+# DOWNLOAD DATABASES
+#####################################################################
+
+Download the following databases from:
+
+	https://mothur.org/wiki/silva_reference_files/
+
+and place them in separate directories as the ones shown at the right:
+
+	v132 SILVA SEED		/home/mjgommo/DATABASES/SILVA_SEED_132
+	v138_1 SILVA		/home/mjgommo/DATABASES/SILVA_REF_138_1
+	v138_1 SILVA GOLD	/home/mjgommo/DATABASES/SILVA_GOLD_138_1
+
+and uncompress them.
+
+Questions:
+
+	* What is the composition, in terms of taxonomic kingdoms, of each database?
+	* What taxonomic levels are considered?
+
+
+# GENERATE A FILE COVERING THE 16S E. coli rRNA REGION OF INTEREST
+#####################################################################
+
+Generate a FASTA file with the E. coli 16S region that should be amplified with the primers discovered above.
+
+You can just search in Google with "16S gene ecoli", to find:
+
+	https://www.ncbi.nlm.nih.gov/nuccore/J01859
+
+Display the sequence as fasta and find the region comprised between the two primers.
+
+Save the file as, for example:
+
+	/home/mjgommo/DATABASES/ecoli_XXXX.fasta
+
+where XXXX represents the region of 16S rRNA that has been amplified to generate the libraries, for example, v4, v3v4 o v2v3.
+
+
+#####################################################################################################################################################
+#####################################################################################################################################################
+
+
+
